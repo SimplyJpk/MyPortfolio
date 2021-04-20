@@ -91,3 +91,5 @@ sw.*
 
 # Vim swap files
 *.swp
+assets/data/SocialMedia.js
+package-lock.json
