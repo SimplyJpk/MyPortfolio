@@ -1,0 +1,100 @@
+:root {
+    /* Fonts */
+    --HeaderFont: "Duru Sans"; /* TODO Not sure about this font */
+    --TitleFont: "Karla";
+
+    --TextFont: "Arial";
+    --LinkFont: "Karla";
+    /* --TextFont: "Inconsolata";
+    --LinkFont: "Inconsolata"; */
+    --MainBackground: #181818;
+    --SiteTopMargin: 2rem;
+    /* Navigation Settings */
+    --SideNavigationBackground: #1e1e1e;
+    --NavigationButtonHover: #242424;
+    --NavigationBorderColor: #2f2f2f;
+    /* TODO should probably us VW so that 4k screen isn't straining to read? */
+    --NavBarWidth: 170px; /* 160px */
+    --NavBarElementHeight: 7.5vh;
+    --NavLinkLeftPadding:8px;
+    /* Mobile Navigation */
+    --MobNavHeight: 80px;
+    /* Colour of Links throughout Website */
+    --MainLinkColour: #13a8ec;
+    --MainLinkShadow: #3e3e3e;
+    --MainLinkHover: #70a6d7;
+    --MainLinkClick: #4da3ff;
+    /* Navigation Link Colours */
+    --NavLinkColour: #FFFFFF;
+    --NavLinkShadow: #000000;
+    --NavLinkHover: #FFFFFF;
+    --NavLinkClick: #4da3ff;
+    --NavTransitionAppear: 0.75s;
+    /* Footer */
+    --FooterHeight: 3vh;
+    --FooterFontSize: 1.5vh;
+    /* Borders */
+    --BorderColour: #2f2f2f;
+    /* Images */
+    --ImageModalBackground: rgba(25, 25, 25, 0.95);
+    --ImageModalBorder: rgba(70, 70, 70, 0.4);
+    /* Global 'ish Additions */
+    --ExtraMarginSpace: 1rem;
+    /* Some pages will have a maximum width */
+    --MaxWidthForPage: 1080px;
+
+    /* Carousel General Settings */
+    --CarouselImageBackground: var(--SideNavigationBackground);
+    --CarouselSlideBorderRadius: 2rem;
+    --CarouselSlideTitleColour: rgba(50,50,50,0.8);
+
+    /* Gallery Config */
+    --GallerySizeWidth: 256px;
+}
+
+@media screen and (min-width: 1921px) {
+  :root {
+      --NavBarWidth: 12vw;
+  }
+}
+
+.Justify {
+  text-justify: auto;
+  text-align: justify;
+}
+
+.ExtraMarginSpace {
+  margin-bottom:var(--ExtraMarginSpace);
+}
+
+a:link {
+  color: var(--MainLinkColour);
+  text-shadow: 0px 0px 1px var(--MainLinkShadow); }
+a:visited {
+  color: var(--MainLinkColour);
+  text-shadow: 0px 0px 1px var(--MainLinkShadow); }
+a:hover {
+  color: var(--MainLinkHover);
+  text-shadow: 0px 0px 1px var(--MainLinkShadow); }
+a:active {
+  color: var(--MainLinkClick);
+  text-shadow: 0px 0px 1px var(--MainLinkShadow); }
+
+.smText {
+  font-size: 80%;
+  font-size: 80%;
+}
+
+.TitleFont {
+  font-family: var(--TitleFont) !important;
+}
+.TextFont {
+  font-family: var(--TextFont);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--HeaderFont);
+}
+
+a {
+  font-family: var(--LinkFont);
+}
