@@ -41,7 +41,7 @@ const SocialMedia = [
   {
     // TODO Add this, Means the Social Container will need adjusting
     name: 'GitHub',
-    url: 'https://github.com/{{ secrets.SOCIAL_GITHUB }}',
+    url: 'https://github.com/{{ process.env.SOCIAL_GITHUB }}',
     img: '/images/Social/github.svg',
     isShown: false,
     isWelcome: true,
