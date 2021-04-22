@@ -40,6 +40,11 @@ jobs:
 #       npm run test --if-present
       env:
         CI: true
+        SOCIAL_EMAIL: ${{ secrets.SOCIAL_EMAIL }}
+        SOCIAL_YOUTUBE: ${{ secrets.SOCIAL_YOUTUBE }}
+        SOCIAL_LINKEDIN: ${{ secrets.SOCIAL_LINKEDIN }}
+        SOCIAL_STEAM: ${{ secrets.SOCIAL_STEAM }}
+        SOCIAL_DISCORD: ${{ secrets.SOCIAL_DISCORD }}
         SOCIAL_GITHUB: ${{ secrets.SOCIAL_GITHUB }}
 
     - name: Clear Generated Folder
