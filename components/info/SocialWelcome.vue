@@ -18,7 +18,7 @@
         <b-row>
           <b-col v-for="(item) in GetOnlyVisibleElements()" :key="item.name + item.background">
             <span v-if="item.isWelcome" :style="GetHoverStyle(item)" :class="'WelcomeSocialLineBG' + (item.name == CurrentHover ? ' IsLineHover' : '')">
-              <a :href="item.url" @mouseover="SetCurrentHover(item.name)" @mouseleave="ClearHover()" target="_blank" class="WelcomeSocialLink">
+              <a :href="(item.name==='Email' ? 'mailto: ' : '') + item.url" @mouseover="SetCurrentHover(item.name)" @mouseleave="ClearHover()" target="_blank" class="WelcomeSocialLink">
                 <img :title="item.name" :src="item.img" class="WelcomeSocialIcon">
                 <!--<span class="LinkName">{{ item.name }}</span>-->
               </a>
@@ -58,11 +58,10 @@ export default {
         return this.VisibleSocialElements
       }
       this.VisibleSocialElements = []
-      SocialMedia.forEach((element) => {
-        if (element.isWelcome) {
-          this.VisibleSocialElements.push(element)
-        }
-      })
+      this.VisibleSocialElements.push(SocialMedia.EMAIL)
+      this.VisibleSocialElements.push(SocialMedia.LINKEDIN)
+      this.VisibleSocialElements.push(SocialMedia.GITHUB)
+      this.VisibleSocialElements.push(SocialMedia.DISCORD)
       return this.VisibleSocialElements
     },
     GetSocialDivSize (size) {

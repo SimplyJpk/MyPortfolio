@@ -19,8 +19,8 @@
           <h1>James Kellie</h1>
           <i>Game Programmer</i>
           <div class="ContactLink">
-            <a :href="ContactMethods">
-              {{ ContactShort }}
+            <a :href="'mailto: ' + EmailUrl">
+              {{ EmailUrl }}
             </a>
           </div>
         </span>
@@ -51,8 +51,7 @@ export default {
   data () {
     return {
       SocialDetails: SocialMedia,
-      ContactMethods: SocialMedia[0].url,
-      ContactShort: SocialMedia[0].short,
+      EmailUrl: SocialMedia.EMAIL.url,
       CurrentHover: ''
     }
   },

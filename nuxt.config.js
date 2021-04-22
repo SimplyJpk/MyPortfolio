@@ -42,7 +42,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/Styler' },
+    '~/plugins/Styler',
     /* '~/plugins/lightGallery.client.js', */
     '~/plugins/AwesomeSwiper.js'
   ],
@@ -52,8 +52,8 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/router-extras'
-    // '@nuxtjs/dotenv' TODO Maybe try fix this?
+    '@nuxtjs/router-extras',
+    '@nuxtjs/dotenv'
     // '@nuxtjs/vuetify'
   ],
   /*
@@ -136,7 +136,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, { isClient, isDev }) {
+    extend(config, { isClient, isDev }) {
       if (isClient) {
       }
     },
@@ -145,7 +145,7 @@ export default {
     }
   },
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push(
         // Doomed from the beginning
         {
@@ -153,10 +153,10 @@ export default {
           path: '/doomed',
           component: resolve(__dirname, 'pages/projects/professional/doomedbeginning')
         }, {
-          name: 'doomedShort2',
-          path: '/doomedbeginning',
-          component: resolve(__dirname, 'pages/projects/professional/doomedbeginning')
-        },
+        name: 'doomedShort2',
+        path: '/doomedbeginning',
+        component: resolve(__dirname, 'pages/projects/professional/doomedbeginning')
+      },
         // Nevergreen
         {
           name: 'nevergreenShort',
@@ -169,10 +169,10 @@ export default {
           path: '/overseer',
           component: resolve(__dirname, 'pages/projects/professional/questoverseer')
         }, {
-          name: 'questOverseer2Short',
-          path: '/questoverseer',
-          component: resolve(__dirname, 'pages/projects/professional/questoverseer')
-        },
+        name: 'questOverseer2Short',
+        path: '/questoverseer',
+        component: resolve(__dirname, 'pages/projects/professional/questoverseer')
+      },
         // Resume
         {
           name: 'resumeShort',

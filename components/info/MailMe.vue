@@ -1,9 +1,9 @@
 <template>
   <div class="ContactMe">
     <b-nav class="NavBar" vertical>
-      <b-nav-item :href="ContactMethod[0].url" class="ContactLink">
+      <b-nav-item :href="'mailto: ' + ContactMethod" class="ContactLink">
         <FontAwesome :icon="['fa', 'envelope']" class="NavSVGIcons" />
-        {{ ContactMethod[0].short }}
+        {{ ContactMethod }}
       </b-nav-item>
     </b-nav>
   </div>
@@ -16,7 +16,7 @@ export default {
   name: 'SocialMediaWelcome',
   data () {
     return {
-      ContactMethod: SocialMediaMethods
+      ContactMethod: SocialMediaMethods.EMAIL.url
     }
   }
 }
