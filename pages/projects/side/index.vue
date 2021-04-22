@@ -30,6 +30,7 @@ export default {
 .SideProject {
   margin: auto;
   max-width: var(--MaxWidthForPage);
+  padding-bottom: 4rem;
 }
 .ProjectText {
   padding-left: 1.5rem;
