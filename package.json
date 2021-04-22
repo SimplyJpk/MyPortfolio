@@ -42,7 +42,7 @@
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-lazy-load": "^1.2.4",
     "responsive-loader": "^1.2.0",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^10.1.1",
     "swiper": "^6.3.5",
     "typescript": "^4.1.2",
     "url-regex-safe": "^1.0.2",

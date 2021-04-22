@@ -139,6 +139,9 @@ export default {
     extend (config, { isClient, isDev }) {
       if (isClient) {
       }
+    },
+    babel: {
+      compact: true
     }
   },
   router: {
