@@ -10,8 +10,7 @@
     </h5>
     <p>- Playing Bass Guitar</p>
     <p>- Geocaching</p>
-    <!-- <p>- Enjoying the <Link url="https://www.factorio.com" word="Factorio" /> Dev logs</p> -->
-    <p>- Playing far too much Oxygen  Not Included and Factorio</p>
+    <p>- Experimenting with new languages</p>
     <p>- Learning new things like how to use Nuxt.js</p>
   </div>
 </template>

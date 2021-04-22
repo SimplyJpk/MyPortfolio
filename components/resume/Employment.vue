@@ -4,7 +4,9 @@
     <div v-for="(item) in workHistory" :key="item.key">
       <div>
         <h6>
-          {{ item.work }}
+          <b>
+            {{ item.work }}
+          </b>
         </h6>
         <span class="TitleFont">Roles</span>
         <p v-for="role in item.roles" :key="item.key+role.role" class="WorkRole TitleFont">
@@ -44,6 +46,9 @@ export default {
   margin-bottom:1px;
   margin-left:1rem;
 }
+.TitleFont {
+  font-size: 105%;
+}
 h6 {
   font-size:105%;
   margin-bottom:0px;
@@ -53,6 +58,6 @@ h6 {
 }
 .Responsibilities {
     line-height: 175%;
-    font-size:85%;
+    font-size:90%;
 }
 </style>

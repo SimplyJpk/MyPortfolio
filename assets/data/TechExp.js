@@ -34,7 +34,7 @@ const TechXP = [
       {
         name: 'Languages & Markup',
         content: [
-          ['JavaScript'],
+          ['JavaScript'], ['Bash'], ['Python'],
           ['PHP'],
           ['JSON/XML'],
           ['Regex'],

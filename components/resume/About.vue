@@ -3,7 +3,7 @@
     <h5><u>About</u></h5>
     <!-- Quick what I do -->
     <p class="Justify">
-      An active and striving game/software developer that enjoys tinkering with the available tools by creating new things by challenging what is already familiar. With frequent and active experience during the last {{ YearsSince2013 }} years using languages such as C#, C++ and some modding languages such as SourcePawn for the SourceEngine and small GameJam sized projects.
+      An active game/software programmer that enjoys tinkering with the available tools by creating new things by challenging what is already familiar. With frequent and active experience during the last {{ YearsSince2013 }} years using languages such as C#, C++ with some experience using scripting languages including Python, JavaScript and Bash.
     </p>
     <!-- Where I Studied -->
     <p class="Justify">
@@ -11,7 +11,7 @@
     </p>
     <!-- What I know -->
     <p class="Justify">
-      With a competent understanding of C# and C++, and experience using markup languages, database entry, style sheets and other common industry tools such as XML, JSON, HTML, PHP, SQL and Version Control. I've also done some relevant programming work for my Team Fortress 2 server making plugins and learning new things like <Link url="https://www.nuxtjs.org" word="NUXT" /> to make a website.
+      With a competent understanding of C# and C++, and experience using markup languages, database entry, style sheets, working within agile lifecycles and other common industry tools such as XML, JSON, HTML, PHP, SQL and Version Control. I've also done some relevant programming work for my Team Fortress 2 server making plugins and learning new things including <Link url="https://www.nuxtjs.org" word="NUXT" /> to make a website.
     </p>
   </div>
 </template>
