@@ -34,9 +34,9 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: Install Dependencies
-      run: npm install
-    - name: DotEnv
-      uses: ./
+      run: npm install      
+    - name: Build Project
+      run: npm run build --if-present
       env:
         SOCIAL_EMAIL: ${{ secrets.SOCIAL_EMAIL }}
         SOCIAL_YOUTUBE: ${{ secrets.SOCIAL_YOUTUBE }}
@@ -44,10 +44,7 @@ jobs:
         SOCIAL_STEAM: ${{ secrets.SOCIAL_STEAM }}
         SOCIAL_DISCORD: ${{ secrets.SOCIAL_DISCORD }}
         SOCIAL_GITHUB: ${{ secrets.SOCIAL_GITHUB }}
-      
-    - name: Build Project
-      run: npm run build --if-present
-      
+        
 #   - name: Make envfile
 #     uses: SpicyPizza/create-envfile@v1
 #     with:
