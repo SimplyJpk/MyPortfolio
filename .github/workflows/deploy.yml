@@ -35,7 +35,7 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: Install Dependencies
       run: npm install
-    - name: run action
+    - name: DotEnv
       uses: ./
       env:
         SOCIAL_EMAIL: ${{ secrets.SOCIAL_EMAIL }}
