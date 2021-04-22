@@ -131,7 +131,7 @@ import VueScreenSize from 'vue-screen-size'
 import Link from '~/components/util/Link'
 
 import CharacterData from '~/assets/data/projects/doomed/CharacterData'
-import DoomedData from '~/assets/data/imageData/doomedbeginning'
+import DoomedData from '~/assets/data/imageData/DoomedBeginning'
 import DoomedTabs from '~/components/projects/doomed/tabs/DoomedTabs'
 import ImageOrganizer from '~/assets/data/imageData/ImageDataOrganizer'
 
