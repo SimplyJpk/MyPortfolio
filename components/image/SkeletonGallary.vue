@@ -7,7 +7,7 @@
         class="ImageSpace"
       >
         <a v-if="readMore && thumb.readMore !== undefined" :href="thumb.readMore" :target="thumb.newTab !== undefined ? '_blank' : '_self'" class="MoreInfo">
-          <img src="~/static/images/Social/info.svg">
+          <img src="/images/Social/info.svg">
         </a>
         <div @click="SetModalImg(thumb.large)" class="GalleryTitle">
           <span>{{ thumb.title }}</span><br>
