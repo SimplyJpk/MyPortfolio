@@ -37,7 +37,7 @@ jobs:
       run: |
         npm install
         npm run build --if-present
-        npm run test --if-present
+#       npm run test --if-present
 
     - name: Copy build to server
       uses: garygrossgarten/github-action-scp@release
