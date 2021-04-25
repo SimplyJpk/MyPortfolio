@@ -8,10 +8,10 @@
     <h5 class="Hobbies">
       <u>Hobbies & Interests</u>
     </h5>
-    <p>- Playing Bass Guitar</p>
-    <p>- Geocaching</p>
-    <p>- Experimenting with new languages</p>
-    <p>- Learning new things like how to use Nuxt.js</p>
+    <p>• Bass Guitar</p>
+    <p>• Geocaching</p>
+    <p>• Strategy games</p>
+    <p>• Learning new things like Nuxt.js</p>
   </div>
 </template>
 
@@ -34,5 +34,8 @@ export default {
 }
 p {
   margin-bottom:0.2rem;
+}
+.OtherExp p {
+  padding-left: 1rem;
 }
 </style>

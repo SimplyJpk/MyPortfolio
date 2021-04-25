@@ -15,10 +15,10 @@
                 <b-container v-for="(subItemContent, index) in Item.content" :key="Type.key+Item.name+subItemContent">
                   <b-row v-if="(index % 2) == 0">
                     <b-col v-if="(index % 2) == 0">
-                      - {{ subItemContent[0] }}
+                      • {{ subItemContent[0] }}
                     </b-col>
                     <b-col v-if="(index + 1) < Item.content.length">
-                      - {{ Item.content[index+1][0] }}
+                      • {{ Item.content[index+1][0] }}
                     </b-col>
                   </b-row>
                 </b-container>

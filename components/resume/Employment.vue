@@ -10,7 +10,7 @@
         </h6>
         <span class="TitleFont">Roles</span>
         <p v-for="role in item.roles" :key="item.key+role.role" class="WorkRole TitleFont">
-          - {{ role.role }}
+          • {{ role.role }}
           <span class="WorkPeriod">
             ({{ role.period }})
           </span>

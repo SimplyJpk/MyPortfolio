@@ -9,7 +9,7 @@
         {{ item.institute }}
       </h6>
       <p>
-        - {{ item.name }} {{ (item.start === item.finish ? item.start : '(' + item.start + '-' + item.finish + ')') }}
+        • {{ item.name }} {{ (item.start === item.finish ? item.start : '(' + item.start + '-' + item.finish + ')') }}
         <template v-if="item.refIndex !== undefined">
           <sub>
             {{ item.refIndex }}
@@ -50,5 +50,6 @@ export default {
 p {
     font-size:95%;
     margin-bottom:2px;
+    margin-left:1rem;
 }
 </style>

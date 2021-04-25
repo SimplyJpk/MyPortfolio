@@ -17,7 +17,7 @@ const TechXP = [
         content: [
           ['Unity Engine', 'https://unity.com/'],
           ['Visual Studio', 'https://visualstudio.microsoft.com/'],
-          ['GitHub', 'https://github.com/SimplyJpk'],
+          ['Git / Perforce', 'https://github.com/SimplyJpk'],
           ['Visual Studio Code', 'https://code.visualstudio.com/'],
           ['Windows'],
           ['Linux SSH']
