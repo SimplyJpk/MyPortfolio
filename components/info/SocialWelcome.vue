@@ -217,8 +217,6 @@ h1 {
   border-radius: var(--PortHeight);
   border: 2px var(--NavigationBorderColor) solid;
 }
-.ContactEmailSVG {
-}
 </style>
 
 <style scoped> /* Link */

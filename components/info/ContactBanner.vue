@@ -24,9 +24,9 @@
             </a>
           </div>
         </span>
-        <span v-for="(item) in SocialDetails" :key="item.name + item.background">
+        <span v-for="(item) in SocialNavBanner" :key="item.name + item.background">
           <!-- We only want to show Social Elements for Welcome (Nothing like Youtube, Steam) -->
-          <div v-if="item.isWelcome && item.isBannerIgnored == null" :style="{ 'background-color': (item.name == CurrentHover ? item.background : 'transparent') }" class="WelcomeSocialLineBG">
+          <div :style="{ 'background-color': (item.name == CurrentHover ? item.background : 'transparent') }" class="WelcomeSocialLineBG">
             <a :href="item.url" @mouseover="SetCurrentHover(item.name)" @mouseleave="ClearHover()" target="_blank" class="WelcomeSocialLink">
               <img :title="item.name" :src="item.img" class="WelcomeSocialIcon">
               <span class="LinkName">{{ item.name }}</span>
@@ -53,6 +53,17 @@ export default {
       SocialDetails: SocialMedia,
       EmailUrl: SocialMedia.EMAIL.url,
       CurrentHover: ''
+    }
+  },
+  computed: {
+    SocialNavBanner () {
+      const ShownData = []
+      ShownData.push(this.SocialDetails.LINKEDIN)
+      if (this.$vssHeight > 700) {
+        ShownData.push(this.SocialDetails.GITHUB)
+        ShownData.push(this.SocialDetails.DISCORD)
+      }
+      return ShownData
     }
   },
   methods: {
@@ -94,13 +105,14 @@ export default {
   align-items: center;
   width: var(--NavBarWidth);
   max-width: 100%;
-  max-height:200px;
+  max-height:240px;
   overflow: hidden;
 }
 .BannerContainer > .AlignMiddle {
   text-align: center;
 }
 .SocialWelcome {
+  padding-top:0.5rem;
   z-index: 0;
   display: flex;
   justify-content:center;
@@ -122,10 +134,12 @@ export default {
   margin:0;
 }
 .WelcomeSocialLineBG {
+  animation: 0.75s ease-in 0s 1 styleFadeIn ;
   transition: 0.75s;
   padding: 0px 0px 0px 0px;
   margin-left:50%;
   transform: translateX(-50%);
+  margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 15px;
   border-color: var(--MainBackground);
@@ -135,12 +149,16 @@ export default {
   overflow:hidden;
   font-size: 70%;
 }
+
 .WelcomeSocialIcon {
   height:18px;
   transition-duration: 0.75s;
 }
 .LinkName {
   transition-duration: 0.75s;
+}
+
+.SocialContainer {
 }
 </style>
 
@@ -153,6 +171,7 @@ export default {
 .Portrait {
   margin: auto;
   width: 70px;
+  height: 70px;
   border-radius: 25px;
   border: 1px var(--NavigationBorderColor) solid;
 }
@@ -171,9 +190,9 @@ a:hover {
   height:100%;
 }
 .ContactLink {
-  margin-top:4px;
+  padding-top:0.5rem;
   margin-bottom:4px;
-  font-size: 70%;
+  font-size: 60%;
   position: relative;
 }
 .ContactLink > a {

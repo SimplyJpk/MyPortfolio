@@ -1,63 +1,49 @@
+<!-- TODO Bit messy how we handle screen size, not important, but we could clean this up a fair bit -->
 <template>
-  <transition
-    appear
-    name="NavAppear"
-  >
-    <div :class="'NavConfig' + (IsPlusSize(this.$vssHeight, this.$vssWidth) ? ' PlusSize' : '')">
-      <div class="ContainerColour" />
-      <ContactBanner v-if="this.$route.path !== '/'" not-lazy-data />
-      <!-- <MailMe /> -->
-      <div class="ContainerStyle">
-        <b-nav :class="'NavBar' + (this.$vssHeight < 770 ? ' LowerNav' : '')" vertical>
-          <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/')" to="/">
-            <FontAwesome :icon="['fa', 'home']" class="NavSVGIcons" />
-            <span class="VerticalFix" />{{ (this.$route.path === '/' ? 'Home' : 'Back') }}
-          </b-nav-item>
-          <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/resume')" to="/resume">
-            <FontAwesome :icon="['fa', 'user-tie']" class="NavSVGIcons" />
-            <span class="VerticalFix" />Resume
-          </b-nav-item>
-          <!--
+  <div :class="'NavConfig' + (IsPlusSize(this.$vssHeight, this.$vssWidth) ? ' PlusSize' : '')">
+    <div class="ContainerColour" />
+    <ContactBanner v-if="this.$route.path !== '/'" not-lazy-data />
+    <!-- <MailMe /> -->
+    <div class="ContainerStyle">
+      <b-nav :class="'NavBar ' + HowLow()" vertical>
+        <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/')" to="/">
+          <FontAwesome :icon="['fa', 'home']" class="NavSVGIcons" />
+          <span class="VerticalFix" />{{ (this.$route.path === '/' ? 'Home' : 'Back') }}
+        </b-nav-item>
+        <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/resume')" to="/resume">
+          <FontAwesome :icon="['fa', 'user-tie']" class="NavSVGIcons" />
+          <span class="VerticalFix" />Resume
+        </b-nav-item>
+        <!--
           <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/blog')" to="/blog" no-prefetch>
             <FontAwesome :icon="['fa', 'comment-alt']" class="NavSVGIcons" />
             <span class="VerticalFix" />Blog
           </b-nav-item> -->
-          <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/projects/professional')" to="/projects/professional" no-prefetch>
-            <FontAwesome :icon="['fa', 'file-alt']" class="NavSVGIcons" />
-            <span class="VerticalFix" />Professional
-          </b-nav-item>
-          <b-nav-item
-            @click="NavClick"
-            v-for="(item) in ProfessionalData"
-            :key="item.name"
-            :to="item.readMore"
-            :class="'NavButton SubButton' + CurrentRoute(item.readMore)"
-          >
-            <span class="VerticalFix" />- {{ item.navTitle != undefined ? item.navTitle : item.name }}
-          </b-nav-item>
-          <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/projects/side')" to="/projects/side" no-prefetch>
-            <FontAwesome :icon="['fa', 'gamepad']" class="NavSVGIcons" />
-            <span class="VerticalFix" />Side
-          </b-nav-item>
-          <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/randomprojects')" to="/randomprojects" no-prefetch>
-            <FontAwesome :icon="['fa', 'mug-hot']" class="NavSVGIcons" />
-            <span class="VerticalFix" />Past
-          </b-nav-item>
-          <!-- TODO work on Side-Project pages? Probably not
-            <b-nav-item
-            v-for="(item) in SideData"
-            :key="item.name"
-            :to="item.readMore"
-            class="NavButton SubButton"
-            no-prefetch
-          >
-            <span class="VerticalFix" />- {{ item.navTitle != undefined ? item.navTitle : item.name }}
-          </b-nav-item> -->
-        </b-nav>
-      </div>
-      <Social />
+        <b-nav-item @click="NavClick" v-if="this.$vssHeight > NavMinSize" :class="'NavButton MainButton' + CurrentRoute('/projects/professional')" to="/projects/professional" no-prefetch>
+          <FontAwesome :icon="['fa', 'file-alt']" class="NavSVGIcons" />
+          <span class="VerticalFix" />Professional
+        </b-nav-item>
+        <b-nav-item
+          @click="NavClick"
+          v-for="(item) in ProfessionalData"
+          :key="item.name"
+          :to="item.readMore"
+          :class="'NavButton SubButton' + CurrentRoute(item.readMore)"
+        >
+          <span class="VerticalFix" />- {{ item.navTitle != undefined ? item.navTitle : item.name }}
+        </b-nav-item>
+        <b-nav-item @click="NavClick" v-if="this.$vssHeight > NavMinSize" :class="'NavButton MainButton' + CurrentRoute('/projects/side')" to="/projects/side" no-prefetch>
+          <FontAwesome :icon="['fa', 'gamepad']" class="NavSVGIcons" />
+          <span class="VerticalFix" />Side
+        </b-nav-item>
+        <b-nav-item @click="NavClick" v-if="this.$vssHeight > NavMinSize" :class="'NavButton MainButton' + CurrentRoute('/randomprojects')" to="/randomprojects" no-prefetch>
+          <FontAwesome :icon="['fa', 'mug-hot']" class="NavSVGIcons" />
+          <span class="VerticalFix" />Past
+        </b-nav-item>
+      </b-nav>
     </div>
-  </transition>
+    <Social v-if="this.$vssHeight > 540" />
+  </div>
 </template>
 
 <script>
@@ -78,7 +64,8 @@ export default {
   data () {
     return {
       ProfessionalData: ProjectUtil.GetProfessionalNavItems(true),
-      SideData: ProjectUtil.GetSideNavItems(true)
+      SideData: ProjectUtil.GetSideNavItems(true),
+      NavMinSize: 500
     }
   },
   methods: {
@@ -94,6 +81,14 @@ export default {
         }
       }, 200)
     },
+    HowLow () {
+      if (this.$vssHeight < 540) {
+        return 'LowererNav'
+      } else if (this.$vssHeight < 770) {
+        return 'LowerNav'
+      }
+      return ''
+    },
     CurrentRoute (routeName) {
       if (this.$route.path === routeName) {
         return ' CurrentRoute'
@@ -105,14 +100,19 @@ export default {
 </script>
 
 <style scoped>
+:root {
+  --NavMinSize: 400px;
+}
 /* Buttons */
 .NavButton {
   overflow: hidden;
   width: var(--NavBarWidth);
   transition: 0.3s;
-  transition-property: height, padding-left, font-size;
+  transition-property: height, padding-left, font-size, margin-top;
   border-top:1px solid;
   border-color:var(--NavigationBorderColor);
+  animation: 0.5s ease-in 0s 1 styleNavAppear ;
+  animation-fill-mode: forwards;
 }
 .NavButton > a {
   overflow: hidden;
@@ -120,6 +120,20 @@ export default {
   width:120%;
   height:100%;
   padding-left:var(--NavLinkLeftPadding);
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+@keyframes styleNavAppear {
+    from {
+      max-height: 0px;
+      opacity: 0;
+      /* width: 0%; */
+    }
+    to {
+      max-height: var(--NavBarElementHeight);
+      opacity: 1;
+      /*width: 100%; */
+    }
 }
 .CurrentRoute {
   background-color: var(--MainBackground);
@@ -163,11 +177,18 @@ export default {
 /* Sub Items */
 .SubButton {
   height:calc(var(--NavBarElementHeight) * 0.5);
+  opacity: 1 !important;
+  min-height: 28px;
   font-size: 80%;
 }
 
 .LowerNav {
+  margin-top: 30px;
+  transition: 0.3s;
+}
+.LowererNav {
   margin-top: 50px;
+  transition: 0.3s;
 }
 </style>
 
@@ -189,7 +210,7 @@ a:active {
   text-shadow: 0px 0px 1px var(--NavLinkShadow);
 }
 .NavConfig {
-  opacity: inherit;
+  opacity: 1;
   width: var(--NavBarWidth);
   margin-right: 0px;
   top:0px;
@@ -210,7 +231,7 @@ a:active {
   position: fixed;
   font-family: var(--TitleFont);
   top: 50%;
-  transform:translateY(-50%);
+  transform:translateY(-40%);
 }
 .NavBar:last-child {
   border-bottom:1px solid;
@@ -219,32 +240,21 @@ a:active {
 .ContainerStyle {
   width:inherit;
   position: inherit;
-  /* border-bottom: 1px solid var(--NavigationBorderColor); */
+  opacity: 0;
+  animation: 1s linear  0.25s 1 NavShow ;
+  animation-fill-mode: forwards;
+}
+@keyframes NavShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .FlexPlease {
   display:flex;
   flex-direction:column;
-}
-</style>
-
-<style scoped>
-.NavAppear-leave-to {
-  opacity: 0;
-  width: 0px;
-}
-.NavAppear-enter {
-  opacity: 0;
-  /* width: 0px;
-  margin-right: var(--NavBarWidth); */
-}
-.NavAppear-enter-to, .NavAppear-leave {
-  opacity: 1;
-  width: var(--NavBarWidth);
-  margin-right: 0px;
-}
-.NavAppear-enter-active,
-.NavAppear-leave-active {
-  transition: all var(--NavTransitionAppear) ease;
 }
 </style>
 

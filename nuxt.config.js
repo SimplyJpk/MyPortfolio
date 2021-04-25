@@ -43,7 +43,7 @@ export default {
   */
   plugins: [
     '~/plugins/Styler',
-    /* '~/plugins/lightGallery.client.js', */
+    '~/plugins/lightGallery.client.js',
     '~/plugins/AwesomeSwiper.js'
   ],
   /*
