@@ -29,7 +29,7 @@ export default {
   mixins: [VueScreenSize.VueScreenSizeMixin],
   head () {
     return {
-      title: 'SimplyJpk\'s Website!'
+      title: 'James Kellie\'s Website!'
     }
   }
 }
