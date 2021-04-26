@@ -221,6 +221,7 @@ a:hover {
 <style scoped>
 .PlusSize .Portrait {
   width:100px;
+  height: 100px;
 }
 .PlusSize {
   max-height:400px !important;
