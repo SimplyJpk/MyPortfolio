@@ -320,13 +320,18 @@ export default {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 4px;
   height:auto;
   width:100%;
   border-radius: 24px;
   min-height: 64px;
+  min-height: 128px;
+  min-width: 128px;
   max-height: 256px;
   max-width: 256px;
   padding: 5px;
+  padding: 4px;
+  background-color: var(--SideNavigationBackground);
 }
 .RedText {
   color:red;
