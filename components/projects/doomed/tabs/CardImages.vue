@@ -1,11 +1,13 @@
 <template>
-  <div class="CharacterImage" data-not-lazy>
-    <img
-      v-bind="mainProps"
-      :src="GetPathSource()"
-      :style="'transform: rotateY('+cardRotation+'deg)'"
-      class="CardImg"
-    >
+  <div class="CharacterDiv">
+    <div class="CharacterImage" data-not-lazy>
+      <img
+        v-bind="mainProps"
+        :src="GetPathSource()"
+        :style="'transform: rotateY('+cardRotation+'deg)'"
+        class="CardImg"
+      >
+    </div>
   </div>
 </template>
 
@@ -104,9 +106,18 @@ export default {
 </script>
 
 <style scoped>
+.CharacterDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
 .CharacterImage {
   position: relative;
-  width:100%;
   min-height:300px;
   max-width:200px;
   margin:auto;
