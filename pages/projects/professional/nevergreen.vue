@@ -1,6 +1,7 @@
 <template>
   <div class="PageBody">
     <img src="/images/Projects/Nevergreen/BannerSmall.jpg" class="Banner" alt="Doomed From the Beginning Banner">
+    <b-img src="/images/Projects/Nevergreen/BannerSmall.jpg" class="Banner" alt="Nevergreen Banner" />
     <h1>Nevergreen</h1>
     <p>Online Upgraded Build (2020): <a href="https://simplyjpk.itch.io/nevergreen">Itch.io</a><br></p>
     <div class="Involvement">
@@ -301,6 +302,7 @@ export default {
 }
 .Banner {
   width:100%;
+  min-height: 240px;
   height:240px;
   margin-bottom: 1rem;
   transform: scaleY(1);

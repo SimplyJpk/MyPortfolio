@@ -283,6 +283,7 @@ export default {
 }
 .Banner {
   width:100%;
+  min-height: 240px;
   height:240px;
   margin-bottom: 1rem;
 }
