@@ -35,6 +35,7 @@ export default {
 
 <style scoped>
 .SymbologyContainer {
+  margin: auto;
 }
 .ExtraPadding {
   padding-bottom:1rem;

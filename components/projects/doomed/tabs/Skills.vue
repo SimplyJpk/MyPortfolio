@@ -55,6 +55,7 @@ export default {
   padding-bottom:0.25rem;
 }
 .CharacterInfoTable {
+  margin: auto;
   border-left: solid 2px var(--NavigationBorderColor);
   text-align: left;
 }
