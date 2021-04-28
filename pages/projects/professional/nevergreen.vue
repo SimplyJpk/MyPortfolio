@@ -1,6 +1,5 @@
 <template>
   <div class="PageBody">
-    <img src="/images/Projects/Nevergreen/BannerSmall.jpg" class="Banner" alt="Doomed From the Beginning Banner">
     <b-img src="/images/Projects/Nevergreen/BannerSmall.jpg" class="Banner" alt="Nevergreen Banner" />
     <h1>Nevergreen</h1>
     <p>Online Upgraded Build (2020): <a href="https://simplyjpk.itch.io/nevergreen">Itch.io</a><br></p>
@@ -305,7 +304,6 @@ export default {
   min-height: 240px;
   height:240px;
   margin-bottom: 1rem;
-  transform: scaleY(1);
 }
 .TaskImageMob {
   display: block;
@@ -324,12 +322,10 @@ export default {
   height:auto;
   width:100%;
   border-radius: 24px;
-  min-height: 64px;
   min-height: 128px;
   min-width: 128px;
   max-height: 256px;
   max-width: 256px;
-  padding: 5px;
   padding: 4px;
   background-color: var(--SideNavigationBackground);
 }
