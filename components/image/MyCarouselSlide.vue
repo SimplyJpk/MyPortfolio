@@ -93,6 +93,7 @@ export default {
 .SlideTitle h5 {
   margin-top: 2px;
   margin-bottom: 2px;
+  text-shadow: 1px 1px black;
 }
 .CarouselSlide:hover > .SlideTitle {
   opacity: 0.15;
