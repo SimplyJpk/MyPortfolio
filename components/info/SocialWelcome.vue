@@ -216,6 +216,10 @@ h1 {
   height: var(--PortHeight);
   border-radius: var(--PortHeight);
   border: 2px var(--NavigationBorderColor) solid;
+  visibility: hidden;
+}
+.Portrait.lazyLoad.isLoaded {
+  visibility: visible;
 }
 </style>
 

@@ -304,7 +304,12 @@ export default {
   min-height: 240px;
   height:240px;
   margin-bottom: 1rem;
+  visibility:hidden;
 }
+.Banner.lazyLoad.isLoaded {
+  visibility: visible;
+}
+
 .TaskImageMob {
   display: block;
   text-align:center;
@@ -321,6 +326,7 @@ export default {
   margin-bottom: 4px;
   height:auto;
   width:100%;
+  border-color: var(--BorderColour);
   border-radius: 24px;
   min-height: 128px;
   min-width: 128px;
@@ -328,7 +334,13 @@ export default {
   max-width: 256px;
   padding: 4px;
   background-color: var(--SideNavigationBackground);
+  opacity: 1;
+  visibility:hidden;
 }
+.TaskImage.lazyLoad.isLoaded {
+  visibility: visible;
+}
+
 .RedText {
   color:red;
 }

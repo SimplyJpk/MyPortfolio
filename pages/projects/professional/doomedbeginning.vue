@@ -286,7 +286,12 @@ export default {
   min-height: 240px;
   height:240px;
   margin-bottom: 1rem;
+  visibility: hidden;
 }
+.Banner.lazyLoad.isLoaded {
+  visibility: visible;
+}
+
 </style>
 
 <style>
