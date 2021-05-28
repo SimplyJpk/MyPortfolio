@@ -13,8 +13,8 @@
     <b-container class="ResumeContents" fluid>
       <b-row v-if="$device.isDesktopOrTablet && this.$vssWidth > 600">
         <b-col>
-          <Education v-bind:education="Education" class="ResumeContainerDiv" />
           <TechExperience v-bind:techExperience="TechXP" class="ResumeContainerDiv" />
+          <Education v-bind:education="Education" class="ResumeContainerDiv" />
         </b-col>
         <b-col>
           <Employment v-bind:workHistory="WorkHistory" class="ResumeContainerDiv" />
@@ -23,8 +23,8 @@
       </b-row>
       <b-row v-else>
         <b-col>
-          <Education v-bind:education="Education" class="ResumeContainerDiv" />
           <TechExperience v-bind:techExperience="TechXP" class="ResumeContainerDiv" />
+          <Education v-bind:education="Education" class="ResumeContainerDiv" />
           <Employment v-bind:workHistory="WorkHistory" class="ResumeContainerDiv" />
           <OtherExperience class="ResumeContainerDiv" />
         </b-col>
