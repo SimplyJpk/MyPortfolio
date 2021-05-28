@@ -9,15 +9,16 @@ const TechXP = [
         name: 'Programming Languages',
         content: [
           ['C#'],
-          ['C++']
+          ['C++'],
+          ['JavaScript']
         ]
       },
       {
         name: 'Tools',
         content: [
-          ['Unity Engine', 'https://unity.com/'],
+          ['Unity Game Engine', 'https://unity.com/'],
           ['Visual Studio', 'https://visualstudio.microsoft.com/'],
-          ['Git / Perforce', 'https://github.com/SimplyJpk'],
+          ['Git / GitHub', 'https://github.com/SimplyJpk'],
           ['Visual Studio Code', 'https://code.visualstudio.com/'],
           ['Windows'],
           ['Linux SSH']
@@ -28,19 +29,28 @@ const TechXP = [
   {
     key: '1',
     name: 'General',
-    desc: 'Past experience, not necessarily to a professional level.',
+    desc: 'Previous experience within a few years',
     content:
     [
       {
         name: 'Languages & Markup',
         content: [
-          ['JavaScript'], ['Bash'], ['Python'],
+          ['Bash'], ['Python'],
           ['PHP'],
-          ['JSON/XML'],
+          ['JSON & XML'],
           ['Regex'],
           ['HTML'],
           ['CSS'],
           ['SQL']
+        ]
+      }, {
+        name: 'Tools',
+        content: [
+          ['Unreal Engine'],
+          ['DotNet'],
+          ['Perforce'],
+          ['Nuxt.js'],
+          ['Vue']
         ]
       }
       /*,
