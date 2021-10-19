@@ -95,10 +95,22 @@ const ProjectGifs = [
     large: './images/ProjectGifs/1942CloneLarge.webp'
   },
   {
+    title: 'Blackjack Console',
+    env: 'C++',
+    url: './images/ProjectGifs/BlackjackSmall.png',
+    large: './images/ProjectGifs/BlackJackConsole.png'
+  },
+  {
     title: 'Timer Scoreboard Webpage',
     env: 'PHP, JavaScript, SQL',
     url: './images/ProjectGifs/ScoreBoard.png',
     large: './images/ProjectGifs/ScoreBoardLarge.png'
+  },
+  {
+    title: 'Monopolize the World [2009]',
+    env: 'VB.net, WinForms, Highschool theme',
+    url: './images/ProjectGifs/Monopolize.gif',
+    large: './images/ProjectGifs/HighschoolLarge.webp'
   },
   {
     title: 'Monopolize The World [2007]',
