@@ -87,6 +87,24 @@ const ProjectGifs = [
     env: 'OpenGL, C++, ImGui',
     url: './images/ProjectGifs/GameLobby.webp',
     large: './images/ProjectGifs/GameLobbyLarge.webp'
+  },
+  {
+    title: '1942 Clone',
+    env: 'OpenGL, C++',
+    url: './images/ProjectGifs/1942Clone.gif',
+    large: './images/ProjectGifs/1942CloneLarge.webp'
+  },
+  {
+    title: 'Timer Scoreboard Webpage',
+    env: 'PHP, JavaScript, SQL',
+    url: './images/ProjectGifs/ScoreBoard.png',
+    large: './images/ProjectGifs/ScoreBoardLarge.png'
+  },
+  {
+    title: 'Monopolize The World [2007]',
+    env: 'VB.net, WinForms',
+    url: './images/ProjectGifs/MonopolizeTheWorld.gif',
+    large: './images/ProjectGifs/MonopolizeTheWorldLarge.webp'
   }
 ]
 
