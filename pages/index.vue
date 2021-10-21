@@ -7,7 +7,7 @@
           <!-- TODO I MAKE GAMES -->
           <!-- Introduction -->
           <h2>What I do</h2>
-          <p>C#/C++ Game & Software programmer located in the Australian Capital Canberra, with a completed <Link url="https://aie.edu.au/course/game-programming-degree/" word="Bachelor of Games and Virtual Worlds" /> game design and programming focused degree with AIE and CIT completed in 2019.</p>
+          <p>C#/C++ Game & Software programmer located in Queensland Australia with a completed <Link url="https://aie.edu.au/course/game-programming-degree/" word="Bachelor of Games and Virtual Worlds" /> game design and programming focused degree with AIE and CIT completed in 2019.</p>
           <!-- A bit about myself -->
           <p>I've been programming for over 14 years now with a more professional capacity since 2013 when I started using Game Engines and playing around with the C++ & C# languages. I started studying game programming at AIE in 2014 through their short courses and then their Bachelor's course in 2016. Each year these courses would have projects that involved teamwork between different streams to produce a game, I helped make <InlineLink url="/projects/professional/nevergreen" word="Nevergreen" /> in 2016, and <InlineLink url="/projects/professional/doomedbeginning" word="They Were Doomed from the Beginning" /> in 2017.</p>
         </div>
