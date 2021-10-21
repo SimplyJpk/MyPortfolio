@@ -110,7 +110,7 @@ const ProjectGifs = [
     title: 'Monopolize the World [2009]',
     env: 'VB.net, WinForms, Highschool theme',
     url: './images/ProjectGifs/Monopolize.gif',
-    large: './images/ProjectGifs/HighschoolLarge.webp'
+    large: './images/ProjectGifs/MonopolizeLarge.webp'
   },
   {
     title: 'Monopolize The World [2007]',
