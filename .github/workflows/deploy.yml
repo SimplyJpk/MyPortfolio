@@ -71,6 +71,11 @@ jobs:
       with:
         key: 'VERSION_INFO'
         value: ${{ github.event.head_commit.message }}
+    - name: Add GitHub LinkBack
+      uses: TickX/var-to-dotenv@v1.1.4
+      with:
+        key: 'COMMIT_SHA'
+        value: $"{{ github.sha }}"
         
     - name: Build Project
       run: npm run build --if-present

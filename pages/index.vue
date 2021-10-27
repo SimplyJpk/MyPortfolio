@@ -46,10 +46,7 @@
           <h2>Latest Updates</h2>
           <p>
             Deployed On: <i>{{ DeployDate() }}</i><br>
-            Update:<br>
-            <i>
-              {{ VersionInfo() }}
-            </i>
+            Commit [<Link :url="CommitLink()" :word="ShortCommitSHA()" />]: <i>{{ VersionInfo() }}</i>
           </p>
         </div>
       </div>
@@ -85,6 +82,15 @@ export default {
     },
     VersionInfo () {
       return process.env.VERSION_INFO
+    },
+    ShortCommitSHA () {
+      if (process.env.COMMIT_SHA.length > 7) {
+        return process.env.COMMIT_SHA.substr(0, 7)
+      }
+      return process.env.COMMIT_SHA
+    },
+    CommitLink () {
+      return process.env.REPO_PATH + '/' + this.ShortCommitSHA()
     }
   }
 }
