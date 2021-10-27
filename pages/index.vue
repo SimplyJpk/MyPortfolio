@@ -42,6 +42,16 @@
           </p>
           <SkeletonGallary :images="ProjectGifs" :readMore="true" />
         </div>
+        <div>
+          <h2>Latest Updates</h2>
+          <p>
+            Deployed On: <i>{{ DeployDate() }}</i><br>
+            Update:<br>
+            <i>
+              {{ VersionInfo() }}
+            </i>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -67,6 +77,14 @@ export default {
   data () {
     return {
       ProjectGifs
+    }
+  },
+  methods: {
+    DeployDate () {
+      return process.env.PUBLISH_DATE
+    },
+    VersionInfo () {
+      return process.env.VERSION_INFO
     }
   }
 }
