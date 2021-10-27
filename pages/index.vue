@@ -90,7 +90,7 @@ export default {
       return process.env.COMMIT_SHA
     },
     CommitLink () {
-      return process.env.REPO_PATH + '/' + this.ShortCommitSHA()
+      return process.env.REPO_PATH + '/commit/' + this.ShortCommitSHA()
     }
   }
 }
