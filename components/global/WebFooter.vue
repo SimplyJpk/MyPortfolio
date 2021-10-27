@@ -2,30 +2,26 @@
   <transition name="FooterAppear" appear>
     <!-- PC Footer -->
     <footer v-if="$device.isDesktopOrTablet && this.$vssWidth > 600" class="FooterBox PCFooter">
-      <div class="FooterText TitleFont">
-        Copyright © 2015-{{ new Date().getFullYear() }}
-        <!-- eslint-disable-next-line -->
-        <n-link to="./">James Kellie</n-link>. All Rights Reserved.
-      </div>
+      <FooterContent />
     </footer>
     <!-- Mobile Footer -->
     <footer v-else class="FooterBox MobFooter">
-      <div class="FooterText TitleFont">
-        Copyright © 2015-{{ new Date().getFullYear() }}
-        <!-- eslint-disable-next-line -->
-        <n-link to="./">James Kellie</n-link>. All Rights Reserved.
-      </div>
+      <FooterContent />
     </footer>
   </transition>
 </template>
 
 <script>
 import VueScreenSize from 'vue-screen-size'
+import FooterContent from '~/components/global/FooterContent'
 
 export default {
   name: 'Footer',
   serverCacheKey () {
     return 'Footer'
+  },
+  components: {
+    FooterContent
   },
   mixins: [VueScreenSize.VueScreenSizeMixin]
 }
