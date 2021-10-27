@@ -51,6 +51,22 @@ jobs:
         key: 'SOCIAL_GITHUB'
         value: ${{ secrets.SOCIAL_GITHUB }}
         
+    - name: Add Publish Date
+      uses: TickX/var-to-dotenv@v1.1.4
+      with:
+        key: 'PUBLISH_DATE'
+        value: ${{ steps.date.outputs.date }}
+    - name: Add Repo Path
+      uses: TickX/var-to-dotenv@v1.1.4
+      with:
+        key: 'REPO_PATH'
+        value: $"https://github.com/{{ github.repository }}"
+    - name: Add VersionInfo
+      uses: TickX/var-to-dotenv@v1.1.4
+      with:
+        key: 'REPO_PATH'
+        value: ${{ github.event.head_commit.message }}
+        
     - name: Build Project
       run: npm run build --if-present
     - name: Clear Generated Folder
