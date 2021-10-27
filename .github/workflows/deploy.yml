@@ -65,7 +65,7 @@ jobs:
       uses: TickX/var-to-dotenv@v1.1.4
       with:
         key: 'REPO_PATH'
-        value: $"https://github.com/{{ github.repository }}"
+        value: https://github.com/${{ github.repository }}
     - name: Add VersionInfo
       uses: TickX/var-to-dotenv@v1.1.4
       with:
@@ -75,7 +75,7 @@ jobs:
       uses: TickX/var-to-dotenv@v1.1.4
       with:
         key: 'COMMIT_SHA'
-        value: $"{{ github.sha }}"
+        value: ${{ github.sha }}
         
     - name: Build Project
       run: npm run build --if-present
