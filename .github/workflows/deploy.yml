@@ -78,7 +78,7 @@ jobs:
         value: ${{ github.sha }}
         
     - name: Build Project
-      run: npm run build --if-present
+      run: npm run generate --if-present
     - name: Clear Generated Folder
       uses: appleboy/ssh-action@master
       with:
