@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     getImgPath (articleData) {
-      return '/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
+      return 'https://www.jameskellie.dev/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
     },
     isBlogDateStale (date) {
       date = new Date(date)

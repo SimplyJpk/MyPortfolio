@@ -29,7 +29,7 @@
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/router-extras": "^1.1.1",
     "@nuxtjs/sitemap": "^2.4.0",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.1",
     "bootstrap-vue": "^2.20.1",
     "dotenv": "^8.6.0",
     "imagemin": "^5.3.1",
@@ -42,7 +42,7 @@
     "node-sass": "^4.14.1",
     "nuxt": "^2.15.8",
     "nuxt-fontawesome": "^0.4.0",
-    "nuxt-lazy-load": "^1.2.7",
+    "nuxt-lazy-load": "^1.2.9",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^10.2.0",
     "swiper": "^6.8.4",
@@ -64,7 +64,7 @@
     "babel-jest": "^24.9.0",
     "eslint": "^5.16.0",
     "eslint-plugin-nuxt": "^0.5.2",
-    "jest": "^25.1.0",
+    "jest": "^27.3.1",
     "vue-jest": "^4.0.0-rc.1",
     "webpack-bundle-analyzer": "^3.9.0"
   }

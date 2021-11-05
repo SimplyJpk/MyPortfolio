@@ -5,7 +5,7 @@
       <p>Overtime I intend to do small blog updates with things I'm learning, explaining something cool, or just to rant about the decisions i've made. Like many other solo blog spaces, I imagine this will sometimes go months between updates, but sometimes we need those moments to refresh and just enjoy the ride.</p>
     </div>
     <b-container fluid>
-      <nuxt-link :to="'blog/' + item.slug" v-for="(item, index) in articleList" :key="index" class="PreviewContainer">
+      <nuxt-link :to="'/blog/' + item.slug" v-for="(item, index) in articleList" :key="index" class="PreviewContainer">
         <b-row>
           <b-col cols="2" class="PreviewImage">
             <b-img
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     getImgPath (articleData) {
-      return '/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
+      return 'https://www.jameskellie.dev/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
     }
   }
 }
