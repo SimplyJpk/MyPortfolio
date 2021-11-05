@@ -2,7 +2,7 @@
   <article class="blogPost">
     <b-container fluid>
       <b-row>
-        <b-col class="blogHead">
+        <b-col cols="10" class="blogHead">
           <i>
             <PrevNext :prev="prev" :next="next" />
           </i>
@@ -16,7 +16,17 @@
           </div>
         </b-col>
         <b-col cols="2" class="PreviewImage">
-          <b-img :src="getImgPath(article)" :alt="article.alt" fluid />
+          <div class="FixedPreview">
+            <b-img :src="getImgPath(article)" :alt="article.alt" fluid />
+            <b><u>{{ article.title }}</u></b>
+            <br>
+            <span v-for="link of article.toc" :key="link.id">
+              <NuxtLink :class="'TOC ' + getNavClassFromDepth(link.depth)" :to="`#${link.id}`">
+                {{ link.text }}
+              </NuxtLink>
+              <br>
+            </span>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -61,6 +71,19 @@ export default {
     getHumanReadable (date) {
       const options = { weekday: 'short', day: 'numeric', year: 'numeric', month: 'short' }
       return new Date(date).toLocaleDateString('en-GB', options)
+    },
+    getNavClassFromDepth (depth) {
+      switch (depth) {
+        case 1:
+          return 'dp1'
+        case 2:
+          return 'dp2'
+        case 3:
+          return 'dp3'
+        case 4:
+          return 'dp4'
+      }
+      return ''
     }
   }
 }
@@ -72,10 +95,47 @@ export default {
 }
 .PreviewImage {
   border-radius: 32px;
-  background-color: var(--SideNavigationBackground);
   height: fit-content;
+  padding-bottom: 0.5rem;
   max-width: 256px;
   margin: 0;
+}
+
+/* Move div in from offscreen over 2 seconds */
+.FixedPreview {
+  animation: fadeIn 1s;
+  animation-fill-mode: forwards;
+}
+/* fadeIn Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.FixedPreview {
+  position: fixed;
+  border-radius: 32px;
+  background-color: var(--SideNavigationBackground);
+  height: fit-content;
+  padding-bottom: 0.5rem;
+  max-width: 256px;
+  padding: 15px;
+}
+.dp2 {
+  margin-left: 0rem;
+}
+.dp3 {
+  margin-left: 0.75rem;
+}
+.dp4 {
+  margin-left: 1.5rem;
+}
+.TOC {
+  font-size:70%;
 }
 </style>
 
@@ -88,5 +148,17 @@ code {
   border: 2px solid var(--NavigationButtonHover);
   padding: 5px;
   color: whitesmoke;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 2px;
+}
+h3 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 2px;
 }
 </style>
