@@ -3,6 +3,8 @@
     <div class="BlogIntroduction">
       <h1>Another Blog</h1>
       <p>Overtime I intend to do small blog updates with things I'm learning, explaining something cool, or just to rant about the decisions i've made. Like many other solo blog spaces, I imagine this will sometimes go months between updates, but sometimes we need those moments to refresh and just enjoy the ride.</p>
+      <h3>Note: Page routing once on the blog page is currently broken, I'll hopefully fix this next time I have time.</h3>
+      <br>
     </div>
     <b-container fluid>
       <NuxtLink :to="'/blog/' + item.slug" v-for="(item, index) in articleList" :key="index" class="PreviewContainer">
