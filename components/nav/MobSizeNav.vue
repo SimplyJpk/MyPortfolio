@@ -10,11 +10,10 @@
           <FontAwesome :icon="['fa', 'user-tie']" class="SmlNavSVGIcons" />
           Resume
         </b-nav-item>
-        <!--
         <b-nav-item class="NavMargin MobMainNavItem" to="/blog" no-prefetch>
           <FontAwesome :icon="['fa', 'comment-alt']" class="SmlNavSVGIcons" />
           Blog
-        </b-nav-item> -->
+        </b-nav-item>
         <!-- <b-nav-item class="NavMargin MobMainNavItem" to="/projects" no-prefetch>
           <font-awesome-icon :icon="['fa', 'file-alt']" class="SmlNavSVGIcons" />
           Projects

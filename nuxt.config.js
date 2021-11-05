@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 export default {
+  components: true,
   ssr: false,
   /*
   ** Headers of the page
@@ -66,6 +67,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/device',
     '@nuxtjs/robots',
+    '@nuxt/content',
     ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 }],
     ['nuxt-fontawesome',
       {
