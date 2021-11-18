@@ -16,17 +16,7 @@
           </div>
         </b-col>
         <b-col cols="2" class="PreviewImage">
-          <div class="FixedPreview">
-            <b-img :src="getImgPath(article)" :alt="article.alt" fluid />
-            <b><u>{{ article.title }}</u></b>
-            <br>
-            <span v-for="link of article.toc" :key="link.id">
-              <NuxtLink :class="'TOC ' + getNavClassFromDepth(link.depth)" :to="`#${link.id}`">
-                {{ link.text }}
-              </NuxtLink>
-              <br>
-            </span>
-          </div>
+          <BlogTOC :article="article" />
         </b-col>
       </b-row>
     </b-container>
@@ -35,12 +25,15 @@
 
 <script>
 import PrevNext from '~/components/blog/PrevNext'
+import BlogTOC from '~/components/blog/BlogTOC'
 export default {
   components: {
-    PrevNext
+    PrevNext,
+    BlogTOC
   },
   async asyncData ({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
+    const imgPath = article.img
 
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
@@ -50,14 +43,12 @@ export default {
 
     return {
       article,
+      imgPath,
       prev,
       next
     }
   },
   methods: {
-    getImgPath (articleData) {
-      return 'https://www.jameskellie.dev/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
-    },
     isBlogDateStale (date) {
       date = new Date(date)
       // Crude safety
@@ -71,19 +62,6 @@ export default {
     getHumanReadable (date) {
       const options = { weekday: 'short', day: 'numeric', year: 'numeric', month: 'short' }
       return new Date(date).toLocaleDateString('en-GB', options)
-    },
-    getNavClassFromDepth (depth) {
-      switch (depth) {
-        case 1:
-          return 'dp1'
-        case 2:
-          return 'dp2'
-        case 3:
-          return 'dp3'
-        case 4:
-          return 'dp4'
-      }
-      return ''
     }
   }
 }
@@ -99,43 +77,6 @@ export default {
   padding-bottom: 0.5rem;
   max-width: 256px;
   margin: 0;
-}
-
-/* Move div in from offscreen over 2 seconds */
-.FixedPreview {
-  animation: fadeIn 1s;
-  animation-fill-mode: forwards;
-}
-/* fadeIn Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.FixedPreview {
-  position: fixed;
-  border-radius: 32px;
-  background-color: var(--SideNavigationBackground);
-  height: fit-content;
-  padding-bottom: 0.5rem;
-  max-width: 256px;
-  padding: 15px;
-}
-.dp2 {
-  margin-left: 0rem;
-}
-.dp3 {
-  margin-left: 0.75rem;
-}
-.dp4 {
-  margin-left: 1.5rem;
-}
-.TOC {
-  font-size:70%;
 }
 </style>
 
