@@ -78,16 +78,25 @@ jobs:
         value: ${{ github.sha }}
         
     - name: Build Project
-      run: npm run build --if-present
-    - name: Clear Generated Folder
+      run: npm run generate --if-present
+      
+    - name: Check file existence
+      id: check_folder
+      uses: andstor/file-existence-action@v1
+      with:
+        files: "${{ github.workspace }}/dist"
+        
+    - name: Clear Old Files  
+      if: steps.check_files.outputs.files_exists == 'true'
       uses: appleboy/ssh-action@master
       with:
         script: ${{ secrets.HOST_COMMAND }}
         host: ${{ secrets.HOST_IP }}
         username: ${{ secrets.HOST_USER }}
         password: ${{ secrets.HOST_PASS }}
-
+  
     - name: Copy build to server
+      if: steps.check_files.outputs.files_exists == 'true'
       uses: garygrossgarten/github-action-scp@release
       with:
         local: ${{ github.workspace }}/dist
