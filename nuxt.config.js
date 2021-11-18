@@ -196,5 +196,14 @@ export default {
       '/admin/**',
       '/dl/'
     ]
+  },
+  generate: {
+    // TODO, this should be automatic in nuxt.js@2.14 : Look into this when time permits
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('articles').only(['slug', 'date']).sortBy('date', 'desc').fetch()
+
+      return files.map(file => '/blog/' + file.slug)
+    }
   }
 }

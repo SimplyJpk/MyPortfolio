@@ -1,4 +1,5 @@
 ---
+id: Project-of-2021
 title: Projects of 2021
 description: With far too much time on my hands I've tried to stay productive.
 alt: Projects of 2021
