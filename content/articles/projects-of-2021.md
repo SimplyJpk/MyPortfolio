@@ -12,7 +12,7 @@ A lot has happened during 2021, from being very comfortable in Canberra and look
 ### Blog
 Towards the end of 2021, a few people I was talking to mentioned they started a blog, talking about projects, and how it often helped them work out future projects. I was quite bored around this time, and used it as an opportunity to work out how to make my own blog. I'd use the opportunity to learn a bit more Nuxt and take the chance to reflect on my previous projects for the year in an attempt to hopefully show that I was productive during the year.
 
-## <a name="Projects"></a> Projects
+## Projects
 I've worked on a few different things this year, usually out of boredom and an attempt to learn new things but in no particular order.
 - Continuous Integration (CI) and Continuous Deployment (CD) for my website to allow ~~lazier~~ easier updates. 
 - Component for landing page to make obvious that it uses [CI/CD](https://github.com/SimplyJpk/MyPortfolio/commit/9d52b62880b13f6f61a78b774f8dfb87bbb6f7d0).
