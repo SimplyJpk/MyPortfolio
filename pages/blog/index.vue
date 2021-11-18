@@ -7,7 +7,7 @@
       <br>
     </div>
     <b-container fluid>
-      <NuxtLink :to="'/blog/' + item.slug" v-for="(item, index) in articleList" :key="index" class="PreviewContainer">
+      <nuxt-link :to="'/blog/' + item.slug" v-for="(item, index) in articleList" :key="index" class="PreviewContainer">
         <b-row>
           <b-col cols="2" class="PreviewImage">
             <b-img
@@ -24,29 +24,26 @@
             </p>
           </b-col>
         </b-row>
-      </NuxtLink>
+      </nuxt-link>
     </b-container>
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData ({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
-
+  async asyncData ({ $content }) {
     const articleList = await $content('articles')
       .only(['title', 'alt', 'img', 'slug', 'longDescription', 'date', 'lastEdit'])
       .sortBy('date', 'desc')
       .fetch()
 
     return {
-      article,
       articleList
     }
   },
   methods: {
     getImgPath (articleData) {
-      return 'https://www.jameskellie.dev/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
+      return '/images/blog/' + (articleData.img !== undefined ? articleData.img : 'no-image-found.png')
     }
   }
 }
