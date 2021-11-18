@@ -78,12 +78,13 @@ jobs:
         value: ${{ github.sha }}
         
     - name: Build Project
-      run: npm run generate --if-present
+      run: npm run generate
       
     - name: Check file existence
       id: check_folder
       uses: andstor/file-existence-action@v1
       with:
+        allow_failure: true
         files: "${{ github.workspace }}/dist"
         
     - name: Clear Old Files  
