@@ -25,6 +25,10 @@
           <div class="ProjectSpace" />
         </div>
         <div class="DivContainer ExtraMarginSpace">
+          <h2>Latest Blog</h2>
+          <LatestBlog :latestBlog="blog" />
+        </div>
+        <div class="DivContainer ExtraMarginSpace">
           <h2>Other Work</h2>
           <p>
             I'm often working on smaller temporary projects to learn bits and pieces involved with languages or libraries that I haven't used extensively in the past. Some of the these can be found within <InlineLink url="/projects/side" word="Side Projects" />, with more serious stuff sometimes showing up in my <Link url="https://github.com/SimplyJpk" word="GitHub" />.
@@ -60,6 +64,7 @@ import InlineLink from '~/components/util/InlineNuxtLink'
 import SocialWelcome from '~/components/info/SocialWelcome'
 import BasicProjectDisplay from '~/components/info/BasicProjectDisplay'
 import SkeletonGallary from '~/components/image/SkeletonGallary'
+import LatestBlog from '~/components/blog/LatestBlog'
 
 import ProjectGifs from '~/assets/data/imageData/CollectiveGifs'
 
@@ -69,11 +74,24 @@ export default {
     SocialWelcome,
     InlineLink,
     BasicProjectDisplay,
-    SkeletonGallary
+    SkeletonGallary,
+    LatestBlog
   },
   data () {
     return {
       ProjectGifs
+    }
+  },
+  async asyncData ({ $content }) {
+    const latestBlog = await $content('articles')
+      .only(['title', 'alt', 'img', 'slug', 'longDescription', 'date', 'lastEdit'])
+      .sortBy('date', 'desc')
+      .limit(1)
+      .fetch()
+
+    const blog = latestBlog[0]
+    return {
+      blog
     }
   },
   methods: {
