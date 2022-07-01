@@ -8,7 +8,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'SimplyJpk' || 'James Kellie',
+    title: 'James Kellie',
     htmlAttrs: {
       lang: 'en'
     },
@@ -55,7 +55,8 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/router-extras',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics'
     // '@nuxtjs/vuetify'
   ],
   /*
@@ -104,6 +105,10 @@ export default {
     }],
     '@nuxtjs/sitemap'
   ],
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    dev: process.isDev
+  },
   robots: {
     UserAgent: '*',
     Disallow: ['/Professional/*', '/fonts/*', '/dragdrop/*']
