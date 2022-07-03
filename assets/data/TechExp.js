@@ -2,7 +2,7 @@ const TechXP = [
   {
     key: '0',
     name: 'Professional',
-    desc: 'Experiences to a professional capacity.',
+    desc: 'Focused experiences within a professional capacity.',
     content:
     [
       {
@@ -21,7 +21,8 @@ const TechXP = [
           ['Git / GitHub', 'https://github.com/SimplyJpk'],
           ['Visual Studio Code', 'https://code.visualstudio.com/'],
           ['Windows'],
-          ['Linux SSH']
+          ['Linux SSH'],
+          ['Version Control']
         ]
       }
     ]
@@ -29,7 +30,7 @@ const TechXP = [
   {
     key: '1',
     name: 'General',
-    desc: 'Previous experience within a few years',
+    desc: 'Past experience with varying levels of knowledge',
     content:
     [
       {
@@ -50,7 +51,9 @@ const TechXP = [
           ['DotNet'],
           ['Perforce'],
           ['Nuxt.js'],
-          ['Vue']
+          ['Vue'],
+          ['Three.js', 'https://threejs.org/'],
+          ['Zentao', 'https://www.zentao.pm/']
         ]
       }
       /*,
