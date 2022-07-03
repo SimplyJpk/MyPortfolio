@@ -8,6 +8,7 @@
             {{ item.work }}
           </b>
         </h6>
+        <span v-if="item.extra !== undefined" class="extraDesc"><i>{{ item.extra }}<br></i></span>
         <span class="TitleFont">Roles</span>
         <p v-for="role in item.roles" :key="item.key+role.role" class="WorkRole TitleFont">
           • {{ role.role }}
@@ -17,7 +18,10 @@
         </p>
         <span class="TitleFont">Responsibilities</span>
         <p class="Responsibilities Justify">
-          <i>{{ item.Description }}</i>
+          <!-- foreach element in item.Description -->
+          <i v-for="desc in item.Description" :key="item.key+desc" class="WorkDesc">
+            <p class="jobDesc">{{ desc }}</p>
+          </i>
         </p>
       </div>
     </div>
@@ -59,5 +63,11 @@ h6 {
 .Responsibilities {
     line-height: 175%;
     font-size:90%;
+}
+.extraDesc {
+  font-size:85%;
+}
+.jobDesc {
+  margin-bottom:0px;
 }
 </style>
