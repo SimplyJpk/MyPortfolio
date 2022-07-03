@@ -10,7 +10,9 @@
     </h5>
     <p>• Bass Guitar</p>
     <p>• Geocaching</p>
-    <p>• Strategy games</p>
+    <p>• Way too much Factorio</p>
+    <p>• Strategy & Management games</p>
+    <p>• Hiking</p>
     <p>• Learning new things like Nuxt.js</p>
   </div>
 </template>
