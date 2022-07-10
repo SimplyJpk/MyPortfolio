@@ -18,11 +18,11 @@ export default {
 <style scoped>
 .SocialMedia {
   border-radius: 50% 50% 50% 50%;
-  margin-left:2px;
-  margin-right:2px;
+  margin-left:5px;
+  margin-right:5px;
   padding:5%;
-  width: 30px;
-  height:30px;
+  width: 35px;
+  height:35px;
   opacity: 0.25;
   transition-property: opacity, box-shadow;
   transition-duration: 0.66s;

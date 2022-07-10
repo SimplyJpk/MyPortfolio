@@ -52,8 +52,8 @@ const SocialMedia =
     name: 'Discord',
     url: 'https://discord.gg/' + process.env.SOCIAL_DISCORD,
     img: '/images/Social/discord.svg',
-    isShown: true,
-    isWelcome: true,
+    isShown: false,
+    isWelcome: false,
     background: '#7289DA',
     hoverColor: '#7289DA'
   },
