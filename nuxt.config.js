@@ -15,7 +15,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description },
+      { hid: 'og:title', name: 'og:title', content: 'James Kellie Portfolio' },
+      { hid: 'og:description', name: 'og:description', content: process.env.npm_package_description },
+      { hid: 'og:image', name: 'og:image', content: 'https://jameskellie.dev/images/Profile/Profile2021Close.webp' },
+      { hid: 'og:url', name: 'og:url', content: 'https://jameskellie.dev' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'James Kellie' },
       { hid: 'full-name', content: 'James Kellie' },
       { hid: 'full-full-name', content: 'James P Kellie' },
       { hid: 'nickname', content: 'SimplyJpk' }

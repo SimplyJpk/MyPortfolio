@@ -61,7 +61,7 @@ export default {
       ShownData.push(this.SocialDetails.LINKEDIN)
       if (this.$vssHeight > 700) {
         ShownData.push(this.SocialDetails.GITHUB)
-        ShownData.push(this.SocialDetails.DISCORD)
+        // ShownData.push(this.SocialDetails.DISCORD)
       }
       return ShownData
     }

@@ -61,7 +61,7 @@ export default {
       this.VisibleSocialElements.push(SocialMedia.EMAIL)
       this.VisibleSocialElements.push(SocialMedia.LINKEDIN)
       this.VisibleSocialElements.push(SocialMedia.GITHUB)
-      this.VisibleSocialElements.push(SocialMedia.DISCORD)
+      // this.VisibleSocialElements.push(SocialMedia.DISCORD)
       return this.VisibleSocialElements
     },
     GetSocialDivSize (size) {

@@ -1,9 +1,9 @@
 <template>
   <div class="ProjectWindow">
     <ImgClick v-if="project.imgIconPath !== undefined" :source="project.imgIconPath + '.webp'" :largeSource="project.imgIconPath + '.jpg'" :alt="project.name" class="projectSplash" />
-    <h3 class="projectTitle">
+    <h2 class="projectTitle">
       {{ project.name }}
-    </h3>
+    </h2>
     <h5 v-if="project.date !== '' && project.productionPeriod !== ''" class="projectDate TitleFont">
       Created During: {{ project.date }}<br>Duration: {{ project.productionPeriod }}
     </h5>
