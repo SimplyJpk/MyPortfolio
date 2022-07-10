@@ -4,7 +4,6 @@
       <SocialWelcome class="ExtraMarginSpace" />
       <div class="WelcomePitch Justify">
         <div class="DivContainer ExtraMarginSpace">
-          <!-- TODO I MAKE GAMES -->
           <!-- Introduction -->
           <h2>What I do</h2>
           <p>C#/C++ Game & Software programmer located in Queensland Australia with a completed <Link url="https://aie.edu.au/course/game-programming-degree/" word="Bachelor of Games and Virtual Worlds" /> game design and programming focused degree with AIE and CIT completed in 2019.</p>
