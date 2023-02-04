@@ -29,7 +29,7 @@ export default {
   mixins: [VueScreenSize.VueScreenSizeMixin],
   head () {
     return {
-      title: 'James Kellie\'s Website!'
+      title: process.env.MY_NAME + ' - Software Developer'
     }
   }
 }

@@ -20,6 +20,16 @@ jobs:
       run: npm install
 
 # Adds variables to the environment
+    - name: Add My Name
+      uses: TickX/var-to-dotenv@v1.1.4
+      with:
+        key: MY_NAME
+        value: ${{ secrets.MY_NAME }}
+    - name: Add My Domain
+      uses: TickX/var-to-dotenv@v1.1.4
+      with:
+        key: MY_DOMAIN
+        value: ${{ secrets.MY_DOMAIN }}
     - name: Add Email Link
       uses: TickX/var-to-dotenv@v1.1.4
       with:

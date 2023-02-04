@@ -3,7 +3,7 @@
     Deployed: {{ PublishDate() }} from <Link :url="RepoPath()" word="GitHub" /> |
     Copyright © 2015-{{ new Date().getFullYear() }}
     <!-- eslint-disable-next-line -->
-    <n-link to="./">James Kellie</n-link>. All Rights Reserved.
+    <n-link to="./">{{ GetMyName() }}</n-link>. All Rights Reserved.
   </div>
 </template>
 
@@ -24,6 +24,9 @@ export default {
     },
     RepoPath () {
       return process.env.REPO_PATH
+    },
+    GetMyName () {
+      return process.env.MY_NAME
     }
   }
 }

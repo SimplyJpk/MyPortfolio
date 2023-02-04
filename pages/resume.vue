@@ -7,9 +7,10 @@
         <a :href="CVDocumentPath + '.docx'" download>.doc</a>
       </span>
     </div>
-    <About class="ResumeContainerDiv" />
+    <About class="ResumeContainerDiv About" />
+    <!-- Projects I consider interesting and of higher quality -->
     <PastProjects :projects="ResumeProjects" :useCards="!IsSingleColumnWidth(this.$vssWidth)" class="ResumeContainerDiv" />
-    <!-- TODO Need to fix alignment so that Technical Experience and Education don't have massive gap due to the grid layout. -->
+    <!-- Additional resume details -->
     <b-container class="ResumeContents" fluid>
       <b-row v-if="$device.isDesktopOrTablet && this.$vssWidth > 600">
         <b-col>
@@ -52,12 +53,7 @@ import OtherExperience from '~/components/resume/OtherExp'
 export default {
   head () {
     return {
-      title: 'James Kellie\'s Resume',
-      // V is this right?
-      meta: [
-        { hid: 'Resume', content: 'James Kellie Resume' },
-        { hid: 'NickName', content: 'SimplyJpk Resume' }
-      ]
+      title: process.env.MY_NAME + ' - Resume'
     }
   },
   components: {

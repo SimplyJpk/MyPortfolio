@@ -8,7 +8,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'James Kellie',
+    title: process.env.MY_NAME,
     htmlAttrs: {
       lang: 'en'
     },
@@ -16,15 +16,15 @@ export default {
       { charset: 'utf-8' },
       { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description },
-      { hid: 'og:title', name: 'og:title', content: 'James Kellie Portfolio' },
+      { hid: 'og:title', name: 'og:title', content: process.env.MY_NAME + ' Portfolio' },
       { hid: 'og:description', name: 'og:description', content: process.env.npm_package_description },
-      { hid: 'og:image', name: 'og:image', content: 'https://jameskellie.dev/images/Profile/Profile2021Close.webp' },
-      { hid: 'og:url', name: 'og:url', content: 'https://jameskellie.dev' },
+      { hid: 'og:image', name: 'og:image', content: process.env.MY_DOMAIN + '/images/Profile/Profile2021Close.webp' },
+      { hid: 'og:url', name: 'og:url', content: process.env.MY_DOMAIN },
       { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:site_name', name: 'og:site_name', content: 'James Kellie' },
-      { hid: 'full-name', content: 'James Kellie' },
-      { hid: 'full-full-name', content: 'James P Kellie' },
-      { hid: 'nickname', content: 'SimplyJpk' }
+      { hid: 'og:site_name', name: 'og:site_name', content: process.env.MY_NAME },
+      { hid: 'full-name', content: process.env.MY_NAME },
+      { hid: 'full-full-name', content: process.env.MY_NAME },
+      { hid: 'nickname', content: process.env.SOCIAL_GITHUB }
     ],
     noscript: [
       { href: 'https://fonts.googleapis.com/css2?family=Duru+Sans&family=Inconsolata&family=Karla&display=swap', rel: 'stylesheet', type: 'text/css' }

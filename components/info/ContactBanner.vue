@@ -9,14 +9,14 @@
         <b-row>
           <b-col>
             <nuxt-link to="/">
-              <img timeout="60000" class="Portrait" alt="James Kellie" srcset="/images/Profile/Profile2021Close.webp" src="/images/Profile/Profile2021Close.jpg">
+              <img timeout="60000" class="Portrait" alt:="GetMyName()" srcset="/images/Profile/Profile2021Close.webp" src="/images/Profile/Profile2021Close.jpg">
             </nuxt-link>
           </b-col>
         </b-row>
       </b-container>
       <div :class="'SocialWelcome FlexCol AlignMiddle'">
         <span class="SocialWelcomeText">
-          <h1>James Kellie</h1>
+          <h1>{{ GetMyName() }}</h1>
           <i>Game Programmer</i>
           <div class="ContactLink">
             <a :href="'mailto: ' + EmailUrl">
@@ -72,6 +72,9 @@ export default {
     },
     ClearHover () {
       this.CurrentHover = ''
+    },
+    GetMyName () {
+      return process.env.MY_NAME
     }
   }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "james-kellie-website",
+  "name": "james_kellie_portfolio",
   "version": "1.0.0",
-  "description": "James Kellie / SimplyJpk Website, a Software & Game Programmer.",
+  "description": "James Kellie, Software & Game Programmer.",
   "author": "James Kellie",
   "private": true,
   "scripts": {

@@ -3,13 +3,13 @@
     <b-container class="WelcomePfp">
       <b-row>
         <b-col>
-          <img timeout="60000" class="Portrait" alt="James Kellie" srcset="/images/Profile/Profile2021.webp" src="/images/Profile/Profile2021.jpg">
+          <img timeout="60000" class="Portrait" alt:="GetMyName()" srcset="/images/Profile/Profile2021.webp" src="/images/Profile/Profile2021.jpg">
         </b-col>
       </b-row>
     </b-container>
     <div :class="'SocialWelcome FlexCol ' + (!IsSingleColumnWidth(this.$vssWidth) ? 'PadLeft' : 'AlignMiddle')">
       <div class="SocialWelcomeText">
-        <h1>Hello, I'm James Kellie.</h1>
+        <h1>Hello, I'm {{ GetMyName() }}.</h1>
         <span class="ShortDesc">
           <i>An Australian game programmer.</i>
         </span>
@@ -75,6 +75,9 @@ export default {
         'background-color': (item.name === this.CurrentHover ? item.background : 'transparent'),
         'filter': 'drop-shadow(0 0 var(--DropShadowSocial) ' + (item.name === this.CurrentHover ? item.hoverColor : 'transparent') + ')'
       }
+    },
+    GetMyName () {
+      return process.env.MY_NAME
     }
   }
 }
