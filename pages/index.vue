@@ -5,10 +5,11 @@
       <div class="WelcomePitch Justify">
         <div class="DivContainer ExtraMarginSpace">
           <!-- Introduction -->
-          <h2>What I do</h2>
-          <p>C#/C++ Game & Software programmer located in Queensland Australia with a completed <Link url="https://aie.edu.au/course/game-programming-degree/" word="Bachelor of Games and Virtual Worlds" /> game design and programming focused degree with AIE and CIT completed in 2019.</p>
-          <!-- A bit about myself -->
-          <p>I've been programming for over 14 years now with a more professional capacity since 2013 when I started using Game Engines and playing around with the C++ & C# languages. I started studying game programming at AIE in 2014 through their short courses and then their Bachelor's course in 2016. Each year these courses would have projects that involved teamwork between different streams to produce a game, I helped make <InlineLink url="/projects/professional/nevergreen" word="Nevergreen" /> in 2016, and <InlineLink url="/projects/professional/doomedbeginning" word="They Were Doomed from the Beginning" /> in 2017.</p>
+          <h2>Me</h2>
+          <p>I am a driven and creative C#/C++ game and software developer based in Queensland, Australia. With a Bachelor's degree in Games and Virtual Worlds from AIE and CIT, I am well-equipped to bring unique and innovative solutions to any project.</p>
+          <!-- About Me -->
+          <p>With over 14 years of experience in programming, I have been honing my skills and exploring my passion for game development. I have developed a strong proficiency in using game engines and working with C++ and C# languages through my studies at AIE, as well as personal projects. During my time at AIE, I had the opportunity to work on several projects that involved teamwork with other streams to create games, such as <InlineLink url="/projects/professional/nevergreen" word="Nevergreen" /> in 2016 and <InlineLink url="/projects/professional/doomedbeginning" word="They Were Doomed from the Beginning" /> in 2017.</p>
+          <p>In addition to my academic background, I have also gained practical experience through freelance and personal projects. I have completed a 5-month freelance project involving mobile development, and have worked on various personal projects that have allowed me to further refine my skills and gain experience in a real-world setting. Currently, I am employed full-time as a software developer, further solidifying my expertise in the field.</p>
         </div>
         <div class="MainProjects">
           <div class="ProjectSpace" />
@@ -28,20 +29,17 @@
           <LatestBlog :latestBlog="blog" />
         </div>
         <div class="DivContainer ExtraMarginSpace">
-          <h2>Other Work</h2>
-          <p>
-            I'm often working on smaller temporary projects to learn bits and pieces involved with languages or libraries that I haven't used extensively in the past. Some of the these can be found within <InlineLink url="/projects/side" word="Side Projects" />, with more serious stuff sometimes showing up in my <Link url="https://github.com/SimplyJpk" word="GitHub" />.
-          </p>
-          <p>
-            <Link url="https://vuejs.org/" word="Vue" /> & <Link url="https://nuxtjs.org/" word="Nuxt" /> were used to construct this website without much web-dev experience with a lot of this website crudely constructed by learning what was required as I deemed it necessary to add. This could have done this much faster using a template, but overall a fun experience, with enough room to add content without much additional work.
-          </p>
+          <h2>Other Projects</h2>
+          <p>I enjoy working on various projects to expand my knowledge and try new technologies. Check out my <InlineLink url="/projects/side" word="Side Projects" /> and <Link url="https://github.com/SimplyJpk" word="GitHub" /> to see some of my recent work.</p>
+          <p>This website was built from scratch using Vue and Nuxt, with a focus on learning and personal growth. While it could have been faster to use a template, I wanted the challenge and experience of building it from scratch.</p>
         </div>
         <!-- Everything Else -->
         <div class="DivContainer ExtraMarginSpace">
-          <h2>Everything Else</h2>
+          <h2>Other Creations</h2>
           <p>
-            Over the years I've played around with a lot of stuff and have constructed a collection of gifs from projects which can be found below. Higher quality versions of the video/gif can usually be viewed by clicking on the image, if their is additional information an info can be clicked on the top-right to load a new page which will take you to the relevant content.<br>
-            <i style="font-size:70%">WebP formats are being used, I apologise if you are using ancient technology that can not display them correctly.</i>
+            I've always been an experimenter and have created a collection of images and videos from various projects. Take a look at my gallery below to see some of my work. If you're interested in learning more about a specific project, simply click on the image for higher quality versions and additional information if available.
+            <br>
+            <i style="font-size:70%">Please note, some of the images use the WebP format. If your device does not support it, I apologize for any inconvenience.</i>
           </p>
           <SkeletonGallary :images="ProjectGifs" :readMore="true" />
         </div>

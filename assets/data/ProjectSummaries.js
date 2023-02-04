@@ -27,8 +27,8 @@ const ProjectSummaries = [
     productionPeriod: '6 months',
     imgIconPath: '/images/Projects/Summaries/QuestOverseerSplash',
     shortDescription:
-      'A project made for 3rd year final assignment that could be potentially sold.',
-    gamePitch: 'A product made for the 3rd year final assignment with the condition that it must have some market viability. The "Quest Overseer" is a Quest Management tool designed to assist developers add quests to a game without additional overhead by utilizing an event driven system which can work with a handful or thousands of active quests that won\'t slow a game down.',
+      'Final project: Quest management tool with efficient event-driven system.',
+    gamePitch: 'Developed as part of my 3rd year final assignment with a focus on market viability, the "Quest Overseer" is a Unity asset designed to streamline quest management for game developers. This tool leverages an efficient event-driven system to handle a large number of active quests without sacrificing performance, simplifying the process of adding quests to a game.',
     readMore: '/projects/professional/questoverseer',
     // ResumeTitle
     title: 'Quest Overseer - Unity Asset',
@@ -47,9 +47,9 @@ const ProjectSummaries = [
     productionPeriod: '5 Months',
     imgIconPath: '/images/Projects/Summaries/DoomedFromBegginingSplash',
     shortDescription:
-      'Started in August 2017, my Final Project of 2nd year "Bachelor of Games and Virtual Worlds". With a small team of Designers, Artists & Programmers, we created an Interactive Novel that involved a changing story based on actions and events taken by the player.',
+      '"They Were Doomed from the Beginning" is a captivating Interactive Novel developed in August 2017 as part of my Final Project in my 2nd year of the Bachelor of Games and Virtual Worlds program. Working with a talented team of designers, artists, and programmers, we crafted a story that evolves based on the player\'s actions and decisions.',
     gamePitch:
-      'They Were Doomed From The Beginning is an Interactive story with RPG elements, ever changing narrative mechanics and narrative combat. Players will draw cards from a Tarot Deck, which will determine their party of characters, weapons and magic they wield, their past, the adventures they’ll have and...their ultimate fate.',
+      'Discover the twists and turns of fate in They Were Doomed From The Beginning, a thrilling interactive story with RPG elements and dynamic narrative mechanics. Draw Tarot cards to determine your party\'s weapons, magic, past, and fate in this unique narrative combat experience.',
     readMore: '/projects/professional/doomedbeginning',
     // ResumeTitle
     title: 'Doomed From the Beginning - PC',
@@ -69,7 +69,7 @@ const ProjectSummaries = [
     shortDescription:
       'Started late in 2016, Final project 1st year "Bachelor of Games and Virtual Worlds". With a team of 3 Designers, 4 Artists & 2 Programmers, we created a narrative driven action/adventure vertical slice of a game.',
     gamePitch:
-      'Nevergreen is a 2.5D platforming game, with the objective of the game to guide BEC, the main character of the game among giant forest and abandoned industrial factories in an exciting and atmospheric puzzle platformer, and discover truth behind BEC’s past and find out what happened to the world around her.',
+      'Discover the mystery behind BEC\'s past in "Nevergreen", a 2.5D puzzle platformer set in a lush forest and abandoned industrial world. Join BEC on a captivating journey through atmospheric landscapes and challenging puzzles to uncover the truth and uncover the secrets of a long-lost world.',
     readMore: '/projects/professional/nevergreen',
     // ResumeTitle
     title: 'Nevergreen - PC',
@@ -104,7 +104,7 @@ const ProjectSummaries = [
     productionPeriod: '',
     imgIconPath: 'images/Projects/Summaries/SimplyTFTimerSplash',
     shortDescription:
-      'A Timer plugin created with SourceMod that acted as a smart-watchclock that tracked player times on new maps and ranked users once a map was setup with zones and rules. The Timer itself worked on some simple logic and systems, however finding every exploitable loophole in some of the logic was quite difficult experience.',
+      'A SourceMod plugin that acts as a smart-watchclock for the Team Fortress 2 game. Tracks player times on maps, ranks users, and provides a unique experience through map setup with zones and rules. Designed with simple logic, yet challenging to overcome exploitable loopholes.',
     gamePitch: '',
     readMore: ''
   },
@@ -120,7 +120,7 @@ const ProjectSummaries = [
     productionPeriod: '',
     imgIconPath: '/images/Projects/Summaries/SimplyTFSplash',
     shortDescription:
-      'SimplyTF was a community server around Team Fortress 2 created for the purpose of playing a HighTower map. It quickly grew into a decent sized community, steam group of over 800 users, Discord server with over 200 users. It was a large Side Project of mine for some time, involving the creation of multiple plugins and maps with the source engine.',
+      'A community server for Team Fortress 2 centered around the HighTower map, SimplyTF grew to include over 800 users on Steam and 200 on Discord, featuring custom maps and plugins developed with the Source engine.',
     gamePitch: '',
     readMore: ''
   }

@@ -8,12 +8,11 @@
     <h5 class="Hobbies">
       <u>Hobbies & Interests</u>
     </h5>
-    <p>• Bass Guitar</p>
-    <p>• Geocaching</p>
-    <p>• Way too much Factorio</p>
-    <p>• Strategy & Management games</p>
-    <p>• Hiking</p>
-    <p>• Learning new things like Nuxt.js</p>
+    <p>• Playing Bass Guitar</p>
+    <p>• Geocaching and Exploring the Outdoors</p>
+    <p>• Strategy and Management Games</p>
+    <p>• Hiking and Adventure</p>
+    <p>• Participating in Park Runs (5km)</p>
   </div>
 </template>
 

@@ -16,10 +16,10 @@
         <b-col>
           <TechExperience v-bind:techExperience="TechXP" class="ResumeContainerDiv" />
           <Education v-bind:education="Education" class="ResumeContainerDiv" />
+          <OtherExperience class="ResumeContainerDiv" />
         </b-col>
         <b-col>
           <Employment v-bind:workHistory="WorkHistory" class="ResumeContainerDiv" />
-          <OtherExperience class="ResumeContainerDiv" />
         </b-col>
       </b-row>
       <b-row v-else>

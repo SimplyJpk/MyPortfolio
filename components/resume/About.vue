@@ -3,15 +3,7 @@
     <h5><u>About</u></h5>
     <!-- Quick what I do -->
     <p class="Justify">
-      An active game/software programmer that enjoys tinkering with the available tools by creating new things by challenging what is already familiar. With frequent and active experience during the last {{ YearsSince2013 }} years using languages such as C#, C++ with some experience using scripting languages including Python, JavaScript and Bash.
-    </p>
-    <!-- Where I Studied -->
-    <p class="Justify">
-      I have completed two short courses in 2013 and 2014 and completed the <Link url="https://aie.edu.au/course/game-programming-degree/" word="Bachelor of Games and Virtual Worlds" /> with a GPA of 6.2 at the Academy of Interactive Entertainment in 2019.
-    </p>
-    <!-- What I know -->
-    <p class="Justify">
-      With a competent understanding of C# and C++, and experience using markup languages, database entry, style sheets, working within agile lifecycles and other common industry tools such as XML, JSON, HTML, PHP, SQL and Version Control. I've also done some relevant programming work for my Team Fortress 2 server making plugins and learning new things including <Link url="https://www.nuxtjs.org" word="NUXT" /> to make a website.
+      As a seasoned game/software programmer experimenting and learning for well over {{ YearsSince2013 }}, I bring a unique combination of technical expertise and creative flair to every project. Proficient in C#, C++, Python, and JavaScript, I am passionate about delivering innovative solutions and pushing the boundaries of what is possible. I have {{ MonthsOfCommercialExperience }} of professional experience and a <Link url="https://aie.edu.au/course/game-programming-degree/" word="Bachelor of Games and Virtual Worlds" /> from the Academy of Interactive Entertainment, which I earned in 2019 with a 6.2 GPA.
     </p>
   </div>
 </template>
@@ -28,7 +20,16 @@ export default {
   },
   computed: {
     YearsSince2013 () {
-      return (new Date().getFullYear() - 2013)
+      return (new Date().getFullYear() - 2013) + ' years'
+    },
+    MonthsOfCommercialExperience () {
+      // Get total number of months since Jan 2022 which will continue to increase over time
+      const months = (new Date().getFullYear() - 2022) * 12 + new Date().getMonth()
+      if (months < 24) {
+        return months + (months > 1 ? ' months' : ' month')
+      }
+      const years = (new Date().getFullYear() - 2022)
+      return years + (years > 1 ? ' years' : ' year')
     }
   }
 }
