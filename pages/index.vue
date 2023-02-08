@@ -25,10 +25,6 @@
           <div class="ProjectSpace" />
         </div>
         <div class="DivContainer ExtraMarginSpace">
-          <h2>Latest Blog</h2>
-          <LatestBlog :latestBlog="blog" />
-        </div>
-        <div class="DivContainer ExtraMarginSpace">
           <h2>Other Projects</h2>
           <p>I enjoy working on various projects to expand my knowledge and try new technologies. Check out my <InlineLink url="/projects/side" word="Side Projects" /> and <Link url="https://github.com/SimplyJpk" word="GitHub" /> to see some of my recent work.</p>
           <p>This website was built from scratch using Vue and Nuxt, with a focus on learning and personal growth. While it could have been faster to use a template, I wanted the challenge and experience of building it from scratch.</p>
@@ -61,7 +57,6 @@ import InlineLink from '~/components/util/InlineNuxtLink'
 import SocialWelcome from '~/components/info/SocialWelcome'
 import BasicProjectDisplay from '~/components/info/BasicProjectDisplay'
 import SkeletonGallary from '~/components/image/SkeletonGallary'
-import LatestBlog from '~/components/blog/LatestBlog'
 
 import ProjectGifs from '~/assets/data/imageData/CollectiveGifs'
 
@@ -71,24 +66,11 @@ export default {
     SocialWelcome,
     InlineLink,
     BasicProjectDisplay,
-    SkeletonGallary,
-    LatestBlog
+    SkeletonGallary
   },
   data () {
     return {
       ProjectGifs
-    }
-  },
-  async asyncData ({ $content }) {
-    const latestBlog = await $content('articles')
-      .only(['title', 'alt', 'img', 'slug', 'longDescription', 'date', 'lastEdit'])
-      .sortBy('date', 'desc')
-      .limit(1)
-      .fetch()
-
-    const blog = latestBlog[0]
-    return {
-      blog
     }
   },
   methods: {

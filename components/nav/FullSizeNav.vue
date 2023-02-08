@@ -14,10 +14,10 @@
           <FontAwesome :icon="['fa', 'user-tie']" class="NavSVGIcons" />
           <span class="VerticalFix" />Resume
         </b-nav-item>
-        <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/blog')" to="/blog">
+        <!-- <b-nav-item @click="NavClick" :class="'NavButton MainButton' + CurrentRoute('/blog')" to="/blog">
           <FontAwesome :icon="['fa', 'comment-alt']" class="NavSVGIcons" />
           <span class="VerticalFix" />Blog
-        </b-nav-item>
+        </b-nav-item> -->
         <b-nav-item @click="NavClick" v-if="this.$vssHeight > NavMinSize" :class="'NavButton MainButton' + CurrentRoute('/projects/professional')" to="/projects/professional" no-prefetch>
           <FontAwesome :icon="['fa', 'file-alt']" class="NavSVGIcons" />
           <span class="VerticalFix" />Professional

@@ -10,10 +10,10 @@
           <FontAwesome :icon="['fa', 'user-tie']" class="SmlNavSVGIcons" />
           Resume
         </b-nav-item>
-        <b-nav-item class="NavMargin MobMainNavItem" to="/blog" no-prefetch>
+        <!-- <b-nav-item class="NavMargin MobMainNavItem" to="/blog" no-prefetch>
           <FontAwesome :icon="['fa', 'comment-alt']" class="SmlNavSVGIcons" />
           Blog
-        </b-nav-item>
+        </b-nav-item> -->
         <!-- <b-nav-item class="NavMargin MobMainNavItem" to="/projects" no-prefetch>
           <font-awesome-icon :icon="['fa', 'file-alt']" class="SmlNavSVGIcons" />
           Projects
@@ -41,24 +41,24 @@
         </div>
         <div class="NavMargin DropStyle">
           <b-nav-item-dropdown
-            id="SideDrop"
+            id=""
             class="DropMenuNav"
             text="Hobby"
             lazy
             no-prefetch
           >
-          <!-- TODO make side pages? Not really important..
+            <!-- TODO make side pages? Not really important.. -->
             <span v-for="(item) in SideData" :key="item.name">
               <b-dropdown-item class="DropItem">
                 <nuxt-link
-                  :to="item.readMore"
+                  to="/projects/side"
                   class="NavButton NavSubLink"
                   no-prefetch
                 >
                   {{ item.navTitle != undefined ? item.navTitle : item.name }}
                 </nuxt-link>
               </b-dropdown-item>
-            </span> -->
+            </span>
           </b-nav-item-dropdown>
         </div>
       </b-nav>
