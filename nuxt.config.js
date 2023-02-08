@@ -200,7 +200,7 @@ export default {
     // '~/middleware/redirects.js'
   ],
   sitemap: {
-    hostname: 'https://simplyjpk.com',
+    hostname: process.env.MY_DOMAIN,
     gzip: true,
     exclude: [
       '/secret',

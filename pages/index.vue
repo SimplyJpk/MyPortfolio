@@ -19,7 +19,7 @@
           </nuxt-link>
           <div class="ProjectSpace" />
           <!-- TODO Replace these with a Slider showing some images? -->
-          <nuxt-link to="/projects/professional/Nevergreen">
+          <nuxt-link to="/projects/professional/nevergreen">
             <BasicProjectDisplay img-alt="Nevergreen, a 1st Year Final Project" fast-image="/images/Projects/Summaries/NeverGreenSplash.webp" img-source="/images/Projects/Summaries/NeverGreenSplash.jpg" project-text="Nevergreen" />
           </nuxt-link>
           <div class="ProjectSpace" />
